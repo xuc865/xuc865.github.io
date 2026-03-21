@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="fedmpt: FedMPT: Federated Multi-Label Prompt Tuning of Vision-Language Models">
+  <meta name="keywords" content="fedmpt, FedMPT: Federated Multi-Label Prompt Tuning of Vision-Language Models, Training-Free Dynamic Adapter, Test-Time Adaptation, Vision-Language models, Foundation models, Efficient Test-Time adaptation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FedMPT | FedMPT: Federated Multi-Label Prompt Tuning of Vision-Language Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/efficient.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">FedMPT: Federated Multi-Label Prompt Tuning of Vision-Language Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Xucong Wang<sup>1</sup></span>
+            &nbsp;
+            &nbsp; 
+            <span class="author-block">
+              Pengkun Wang<sup>1,</sup><sup>2</sup></span>
+            &nbsp;
+            &nbsp;
+            <span class="author-block">
+              Zhe Zhao<sup>1,3</sup>
+            </span>
+            &nbsp;
+            &nbsp;
+            <span class="author-block">
+              Liheng Yu<sup>1</sup>
+            </span>
+            &nbsp;
+            &nbsp;
+            <span class="author-block">
+              Shuang Wang<sup>1</sup>
+            </span>
+            &nbsp;
+            &nbsp;
+            <span class="author-block">
+              Yang Wang<sup>1,2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Science and Technology of China (USTC)</span>
+            &nbsp;
+            &nbsp;
+            <span class="author-block"><sup>2</sup>Suzhou Institute for Advanced Research, USTC</span>
+            &nbsp;
+            &nbsp;
+            <span class="author-block"><sup>3</sup>City University of Hong Kong</span>
+            <br>
+            <p style="padding: 10px"></p>
+            <span style="font-weight: bold;">CVPR 2026</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="fedmpt"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/xuc865/fedmpt-main"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="display: flex; justify-content: space-between; align-items: center;">
+      <img src="static/images/comp.png" alt="First Image" style="width: 100%; max-width: 1000px;">
+       
+    </div>
+    
+    <div class="method-overview-text has-text-justified" style="font-size: 17.6px;">
+      <p>
+        Comparisons of Classic KD, PromptKD and our fedmpt. The upper/lower part is the training/inference stage. TE means the Text Encoder. LR means Low-Resolution. <b>(a)</b> Classic KD of VLMs, where students are fully-tuned. <b>(b)</b> PromptKD, which leverages prompts to learning from teachers. Both (a) and (b) are designed for non-LR inference. <b>(c)</b> The proposed fedmpt, a prompt self-distillation scheme to solve the LR challenges. Here, two students are the same models but fed with different inputs. fedmpt leverages fine-grained attribute guidance and simultaneously distills from two levels to boost the  model's robustness to data resolutions.
+      </p>
+  </div>
+  </div>
+  <p style="padding: 15px"></p>
+</section> -->
+
+<section class="hero is-light is-small">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <p style="padding: 15px"></p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Multi-Label Recognition (MLR) based on Vision-Language Models (VLMs) aims to leverage their pre-trained knowledge  to better adapt complex recognition scenarios, thereby enhancing model robustness. However, for realistic decentralized applications  requiring federated learning, adapting VLMs to each client that possesses private and heterogeneous data can cause the model to overfit spurious label correlations, consequently triggering irrelevant categories when encountering new samples. 
+          </p>
+          <p>
+            To tackle this problem, we reconsider the federated learning for MLR with a causal model, in which we adopt a front-door adjustment and decouple the MLR modeling process by intermediate variables that magnify the oracle label co-occurrence. Guided by our analysis, we propose our FedMPT, the first method specifically designed for federated MLR. The core idea of FedMPT is to leverage generalizable conditions to steer federated MLR to mitigate erroneous label activations. To achieve this, FedMPT introduces an Large Language Model (LLM)-driven pipeline to decipher the underlying conditions that govern label dependencies. Furthermore, we introduce an optimal transport between the condition-enriched prompts and the image patches to uncover multiple region-level semantics. Finally, we generate synergistic predictions from different conditions with a crafted gating mechanism. 
+          
+          </p>
+          <p>
+          Experiments on multiple benchmark datasets show that our proposed approach achieves competitive results and outperforms SOTA methods under varied settings.
+          </p>
+        </div>
+      </div>
+    </div>
+    <p style="padding: 15px"></p>
+</section>
+
+
+<section class="section">
+  <p style="padding: 15px"></p>
+  <div class="container is-max-desktop">
+    <div style="text-align: center; margin-bottom: 20px;">
+      <h2 class="title">Overview</h2>
+      <p style="padding: 15px"></p>
+      <img src="static/images/main.png" alt="Overview Image" style="width: 100%; max-width: 1000px; margin: auto;">
+      <p style="padding: 5px"></p>
+      <h3 class="subtitle">Overview of <b>fedmpt</b></h3>
+      <p style="padding: 10px"></p>
+      <div class="method-overview-text" style="text-align: justify; margin: auto; max-width: 100%; font-size: 17.6px;">
+        <p>
+          Overview of our proposed FedMPT framework. (a) The LLM-generated conditions are instantiated into Condition Prompts (CPs), which are encoded into text embeddings. For a given image, its visual feature map is aligned with these prompt embeddings via Optimal Transport (OT). The contributions of different conditions are then adaptively calibrated by a gating module. (b) At each communication 
+          round, the server aggregates the parameters of CPs, adapters, and gating modules and distributes the updated parameters back.
+        </p>
+        <br>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="method-overview-text" style="text-align: justify; margin: auto; max-width: 100%; font-size: 17.6px;">
+      <h2 class="title" style="text-align: center;">FedMPT Efficiency and Adaptability</h2>
+      <p style="padding: 10px"></p>
+      <p>
+        As in <b>Table 5</b> of the paper, we compare <b>computation overhead</b> on <b>PASCAL VOC2007</b> under the same federated multi-label setup (CLIP ViT-B/16).
+        FedMPT reaches the highest <b>mAP</b> while keeping <b>tunable parameters moderate (0.80M)</b>—smaller than Fed-MaPLe (3.56M), FedTPG (4.21M), Fed-RAM (13.02M), and FedMVP (1.14M)—with training time <b>97.03 ms / iteration</b>, which is higher than the lightest baselines but far below Fed-RAM.
+      </p>
+    </div>
+    <p style="padding: 20px"></p>
+    <div class="table-container is-max-desktop" style="text-align: center; overflow-x: auto;">
+      <table class="subtitle" style="width:100%; min-width: 640px; margin-left:auto; margin-right:auto;">
+        <caption class="subtitle" style="caption-side: bottom; text-align: center; padding-top: 15px;">
+          <b>Computation overhead on VOC2007</b> (Table 5). mAP is reported under the paper’s default federated MLR protocol.
+        </caption>
+        <tbody>
+          <tr><td colspan="5" style="border-bottom: 2px solid #ddd;"></td></tr>
+          <tr>
+            <th style="padding: 10px 8px;">Method</th>
+            <th style="padding: 10px 8px;">Total params</th>
+            <th style="padding: 10px 8px;">Tunable params</th>
+            <th style="padding: 10px 8px;">Training time</th>
+            <th style="padding: 10px 8px;">mAP (%)</th>
+          </tr>
+          <tr><td colspan="5" style="border-bottom: 2px solid #ddd;"></td></tr>
+          <tr>
+            <td style="padding: 10px 8px;">Fed-PosCoOp</td>
+            <td style="padding: 10px 8px;">86.60 M</td>
+            <td style="padding: 10px 8px;">0.02 M</td>
+            <td style="padding: 10px 8px;">38.93 ms/iter</td>
+            <td style="padding: 10px 8px;">84.46</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 8px;">Fed-MaPLe</td>
+            <td style="padding: 10px 8px;">90.14 M</td>
+            <td style="padding: 10px 8px;">3.56 M</td>
+            <td style="padding: 10px 8px;">65.25 ms/iter</td>
+            <td style="padding: 10px 8px;">81.87</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 8px;">FedTPG</td>
+            <td style="padding: 10px 8px;">90.79 M</td>
+            <td style="padding: 10px 8px;">4.21 M</td>
+            <td style="padding: 10px 8px;">59.43 ms/iter</td>
+            <td style="padding: 10px 8px;">84.23</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 8px;">Fed-RAM</td>
+            <td style="padding: 10px 8px;">99.60 M</td>
+            <td style="padding: 10px 8px;">13.02 M</td>
+            <td style="padding: 10px 8px;">384.51 ms/iter</td>
+            <td style="padding: 10px 8px;">85.54</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 8px;">FedMVP</td>
+            <td style="padding: 10px 8px;">87.72 M</td>
+            <td style="padding: 10px 8px;">1.14 M</td>
+            <td style="padding: 10px 8px;">75.80 ms/iter</td>
+            <td style="padding: 10px 8px;">85.61</td>
+          </tr>
+          <tr style="background-color:#e6e6e6">
+            <td style="padding: 10px 8px;"><b>FedMPT (Ours)</b></td>
+            <td style="padding: 10px 8px;"><b>87.38 M</b></td>
+            <td style="padding: 10px 8px;"><b>0.80 M</b></td>
+            <td style="padding: 10px 8px;"><b>97.03 ms/iter</b></td>
+            <td style="padding: 10px 8px;"><b>90.10</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="padding: 15px"></p>
+    <div class="method-overview-text" style="text-align: justify; margin: auto; max-width: 100%; font-size: 17.6px;">
+      <p>
+        For <b>adaptability</b>, <b>Table 1</b> varies client <b>data heterogeneity</b> (ratio <i>t</i> ∈ {10%, …, 100%} via clustering-based splits) and reports mAP, per-category F1 (CF1), and overall F1 (OF1).
+        The table below lists the <b>average mAP</b> over all <i>t</i> for representative federated VLM baselines; FedMPT improves over the strong prior <b>FedMVP</b> by <b>+3.84%</b> on VOC2007, <b>+3.01%</b> on COCO2014, and <b>+3.36%</b> on NUS-WIDE in this metric (paper).
+        <b>Table 3</b> further evaluates a <b>real-world federated MLR</b> setting on Multi-Scene and MLRSNet.
+      </p>
+    </div>
+    <p style="padding: 15px"></p>
+
+    <div class="table-container is-max-desktop" style="text-align: center; overflow-x: auto;">
+      <table class="subtitle" style="width:100%; min-width: 720px; margin-left:auto; margin-right:auto;">
+        <caption class="subtitle" style="caption-side: bottom; text-align: center; padding-top: 15px;">
+          <b>Heterogeneous benchmark — average mAP (%)</b> over heterogeneity levels <i>t</i> ∈ {10%, 20%, …, 100%} (Table 1).
+        </caption>
+        <tbody>
+          <tr><td colspan="4" style="border-bottom: 2px solid #ddd;"></td></tr>
+          <tr>
+            <th style="padding: 12px 8px;">Method</th>
+            <th style="padding: 12px 8px;">VOC2007</th>
+            <th style="padding: 12px 8px;">COCO2014</th>
+            <th style="padding: 12px 8px;">NUS-WIDE</th>
+          </tr>
+          <tr><td colspan="4" style="border-bottom: 2px solid #ddd;"></td></tr>
+          <tr>
+            <td style="padding: 12px 8px;"><a href="https://arxiv.org/abs/2207.06735">Fed-DualCoOp</a></td>
+            <td style="padding: 12px 8px;">84.94</td>
+            <td style="padding: 12px 8px;">55.63</td>
+            <td style="padding: 12px 8px;">45.00</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 8px;"><a href="https://openreview.net/forum?id=NW31gAylIm">FedTPG</a></td>
+            <td style="padding: 12px 8px;">85.12</td>
+            <td style="padding: 12px 8px;">58.69</td>
+            <td style="padding: 12px 8px;">50.93</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 8px;"><a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Tan_Recover_and_Match_Open-Vocabulary_Multi-Label_Recognition_through_Knowledge-Constrained_Optimal_Transport_CVPR_2025_paper.pdf">Fed-RAM</a></td>
+            <td style="padding: 12px 8px;">85.67</td>
+            <td style="padding: 12px 8px;">61.08</td>
+            <td style="padding: 12px 8px;">53.33</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 8px;"><a href="https://arxiv.org/abs/2504.20860">FedMVP</a></td>
+            <td style="padding: 12px 8px;">85.59</td>
+            <td style="padding: 12px 8px;">61.64</td>
+            <td style="padding: 12px 8px;">52.30</td>
+          </tr>
+          <tr style="background-color:#e6e6e6">
+            <td style="padding: 12px 8px;"><b>FedMPT (Ours)</b></td>
+            <td style="padding: 12px 8px;"><b>89.51</b></td>
+            <td style="padding: 12px 8px;"><b>64.65</b></td>
+            <td style="padding: 12px 8px;"><b>56.69</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="padding: 15px"></p>
+
+    <div class="table-container is-max-desktop" style="text-align: center; overflow-x: auto;">
+      <table class="subtitle" style="width:100%; min-width: 880px; margin-left:auto; margin-right:auto;">
+        <caption class="subtitle" style="caption-side: bottom; text-align: center; padding-top: 15px;">
+          <b>Real-world federated MLR benchmark</b> (Table 3): mAP, CF1, and OF1 (%).
+        </caption>
+        <tbody>
+          <tr><td colspan="7" style="border-bottom: 2px solid #ddd;"></td></tr>
+          <tr>
+            <th rowspan="2" style="padding: 12px 8px; vertical-align: middle;">Method</th>
+            <th colspan="3" style="padding: 12px 8px;">Multi-Scene</th>
+            <th colspan="3" style="padding: 12px 8px;">MLRSNet</th>
+          </tr>
+          <tr>
+            <th style="padding: 10px 6px;">mAP</th>
+            <th style="padding: 10px 6px;">CF1</th>
+            <th style="padding: 10px 6px;">OF1</th>
+            <th style="padding: 10px 6px;">mAP</th>
+            <th style="padding: 10px 6px;">CF1</th>
+            <th style="padding: 10px 6px;">OF1</th>
+          </tr>
+          <tr><td colspan="7" style="border-bottom: 2px solid #ddd;"></td></tr>
+          <tr>
+            <td style="padding: 12px 8px;"><a href="https://arxiv.org/abs/2207.06735">Fed-DualCoOp</a></td>
+            <td style="padding: 10px 6px;">40.09</td>
+            <td style="padding: 10px 6px;">31.37</td>
+            <td style="padding: 10px 6px;">50.18</td>
+            <td style="padding: 10px 6px;">38.24</td>
+            <td style="padding: 10px 6px;">40.61</td>
+            <td style="padding: 10px 6px;">66.97</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 8px;"><a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Tan_Recover_and_Match_Open-Vocabulary_Multi-Label_Recognition_through_Knowledge-Constrained_Optimal_Transport_CVPR_2025_paper.pdf">Fed-RAM</a></td>
+            <td style="padding: 10px 6px;">49.41</td>
+            <td style="padding: 10px 6px;">39.07</td>
+            <td style="padding: 10px 6px;">52.70</td>
+            <td style="padding: 10px 6px;">47.83</td>
+            <td style="padding: 10px 6px;">46.07</td>
+            <td style="padding: 10px 6px;">66.18</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 8px;"><a href="https://arxiv.org/abs/2504.20860">FedMVP</a></td>
+            <td style="padding: 10px 6px;">49.56</td>
+            <td style="padding: 10px 6px;">39.62</td>
+            <td style="padding: 10px 6px;">54.16</td>
+            <td style="padding: 10px 6px;">45.89</td>
+            <td style="padding: 10px 6px;">44.98</td>
+            <td style="padding: 10px 6px;">66.52</td>
+          </tr>
+          <tr style="background-color:#e6e6e6">
+            <td style="padding: 12px 8px;"><b>FedMPT (Ours)</b></td>
+            <td style="padding: 10px 6px;"><b>53.68</b></td>
+            <td style="padding: 10px 6px;"><b>43.97</b></td>
+            <td style="padding: 10px 6px;"><b>57.83</b></td>
+            <td style="padding: 10px 6px;"><b>58.76</b></td>
+            <td style="padding: 10px 6px;"><b>50.86</b></td>
+            <td style="padding: 10px 6px;"><b>71.22</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<p style="padding: 15px"></p>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>coming soon :)</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="fedmpt">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/xuc865/fedmpt-main" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align: center;">
+            This page was built using <a
+              href="https://github.com/nerfies/nerfies.github.io">this template</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
