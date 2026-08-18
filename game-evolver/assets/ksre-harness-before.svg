@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="250" viewBox="55 195 715 220" role="img" aria-label="KSRE baseline harness flowchart">
+  <rect width="800" height="600" fill="#f7f3ec"/>
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2a7f76"/></marker>
+    <marker id="fail-arrow" markerWidth="6" markerHeight="6" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#b66b58"/></marker>
+  </defs>
+  <path d="M166 254 L204 254" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M296 254 L334 254" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M426 254 L464 254" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M556 254 L594 254" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M686 254 L724 254" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M640 286 C640 360 380 392 380 286" fill="none" stroke="#b66b58" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#fail-arrow)"/>
+  <text x="505" y="376" text-anchor="middle" font-size="9.2" fill="#b66b58">compile failure → patch and replay</text>
+
+  <rect x="74" y="224" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="120" y="247" text-anchor="middle" font-size="10.2" fill="#2f3437">Task spec</text>
+  <text x="120" y="264" text-anchor="middle" font-size="9.2" fill="#726b60">+ seed</text>
+  <rect x="204" y="224" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="250" y="247" text-anchor="middle" font-size="10.2" fill="#2f3437">Generate</text>
+  <text x="250" y="264" text-anchor="middle" font-size="9.2" fill="#726b60">one candidate</text>
+  <rect x="334" y="224" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="380" y="247" text-anchor="middle" font-size="10.2" fill="#2f3437">Compile</text>
+  <text x="380" y="264" text-anchor="middle" font-size="9.2" fill="#726b60">+ replay</text>
+  <rect x="464" y="224" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="510" y="247" text-anchor="middle" font-size="10.2" fill="#2f3437">Launch</text>
+  <text x="510" y="264" text-anchor="middle" font-size="9.2" fill="#726b60">+ label check</text>
+  <rect x="594" y="224" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="640" y="247" text-anchor="middle" font-size="10.2" fill="#2f3437">One smoke</text>
+  <text x="640" y="264" text-anchor="middle" font-size="9.2" fill="#726b60">route</text>
+  <rect x="724" y="224" width="24" height="60" rx="9" fill="#e1eee9" stroke="#2a7f76" stroke-width="1.6"/>
+  <text x="736" y="254" text-anchor="middle" font-size="8.8" font-weight="700" fill="#2f3437" transform="rotate(-90 736 254)">ACCEPT</text>
+
+</svg>

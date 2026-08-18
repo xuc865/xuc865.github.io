@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Game-Evolver: dual-loop evolution for end-to-end game orchestration.">
+  <title>Game-Evolver | Better games through better orchestration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Game-Evolver home">
+      <span class="wordmark-mark" aria-hidden="true">GE</span>
+      <span>Game-Evolver</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#evidence">Evidence</a>
+      <a href="#loop">The loop</a>
+      <a href="#demo">Demo</a>
+      <a href="#paper">Paper</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="pulse-dot"></span> Research project / 2026</p>
+        <h1>Better games<br><em>through better orchestration.</em></h1>
+        <p class="hero-lede">Game-Evolver co-evolves the agent that builds a game and the harness that teaches it how to build better.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#demo">See the evolution <span aria-hidden="true">&#8595;</span></a>
+          <a class="text-link" href="assets/Game-Evolver-paper.pdf" target="_blank" rel="noreferrer">Read the paper <span aria-hidden="true">&#8599;</span></a>
+          <a class="text-link" href="https://github.com/xuc865/Game-Evolver" target="_blank" rel="noreferrer">Open GitHub <span aria-hidden="true">&#8599;</span></a>
+        </div>
+      </div>
+      <div class="hero-art reveal reveal-delay">
+        <div class="orbit-label orbit-label-top">artifact</div>
+        <div class="orbit-label orbit-label-bottom">harness</div>
+        <div class="hero-ring hero-ring-one"></div>
+        <div class="hero-ring hero-ring-two"></div>
+        <div class="hero-link" aria-hidden="true"></div>
+        <div class="hero-core hero-core-goa">
+          <span>GOA</span>
+          <small>game orchestration<br>agent</small>
+        </div>
+        <div class="hero-core hero-core-hpa">
+          <span>HPA</span>
+          <small>harness proposal<br>agent</small>
+        </div>
+        <div class="hero-system-label">dual-loop system</div>
+        <div class="hero-node hero-node-a">01</div>
+        <div class="hero-node hero-node-b">02</div>
+        <div class="hero-node hero-node-c">03</div>
+      </div>
+    </section>
+
+    <section class="marquee-band" aria-label="Project statement">
+      <div class="marquee-track"><span>BUILD</span><b>*</b><span>RUN</span><b>*</b><span>OBSERVE</span><b>*</b><span>EVOLVE</span><b>*</b><span>BUILD</span><b>*</b><span>RUN</span><b>*</b><span>OBSERVE</span><b>*</b><span>EVOLVE</span></div>
+    </section>
+
+    <section id="evidence" class="section-shell evidence-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / Evidence</p>
+        <h2>The result is not a prettier prompt.<br><em>It is a more reliable game.</em></h2>
+      </div>
+      <div class="metric-grid">
+        <article class="metric-card reveal">
+          <p class="metric-kicker">GameCraft-Bench / Kimi</p>
+          <strong><span class="count" data-target="21.9">0</span><sup>%</sup></strong>
+          <p>relative overall gain<br><span class="muted">20.06 &rarr; 24.45</span></p>
+        </article>
+        <article class="metric-card metric-card-accent reveal reveal-delay">
+          <p class="metric-kicker">V-GameGym / GLM5.2</p>
+          <strong><span class="count" data-target="28.9">0</span><sup>%</sup></strong>
+          <p>relative overall gain<br><span class="muted">37.60 &rarr; 48.45</span></p>
+        </article>
+        <article class="metric-card reveal reveal-delay-two">
+          <p class="metric-kicker">VeriGame / GLM5.2</p>
+          <strong><span class="count" data-target="10.2">0</span><sup> pts</sup></strong>
+          <p>overall score lift<br><span class="muted">46.19 &rarr; 56.39</span></p>
+        </article>
+      </div>
+      <p class="source-note reveal">Reported overall scores from the Game-Evolver paper. Relative gains are calculated from the published baseline and evolved scores.</p>
+    </section>
+
+    <section id="loop" class="loop-section">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 / The loop</p>
+          <h2>Two loops. One<br><em>observable outcome.</em></h2>
+        </div>
+        <div class="loop-diagram reveal">
+          <div class="loop-column loop-column-inner">
+            <span class="loop-index">INNER LOOP</span>
+            <h3>Make the game run.</h3>
+            <p>The game orchestration agent edits a project, launches the runtime, probes meaningful states, and repairs what the player can actually see.</p>
+            <div class="step-list"><span>01&nbsp; edit</span><span>02&nbsp; launch</span><span>03&nbsp; replay</span></div>
+          </div>
+          <div class="loop-connector" aria-hidden="true"><span>&#10229;</span><span>&#10230;</span></div>
+          <div class="loop-column loop-column-outer">
+            <span class="loop-index">OUTER LOOP</span>
+            <h3>Make the harness learn.</h3>
+            <p>The harness proposal agent turns recurring failures into reusable guidance, then keeps, revises, merges, or retires those skills.</p>
+            <div class="step-list"><span>01&nbsp; diagnose</span><span>02&nbsp; propose</span><span>03&nbsp; admit</span></div>
+          </div>
+        </div>
+        <div class="loop-caption reveal"><span class="caption-line"></span><span>Quality appears when intention survives execution.</span></div>
+      </div>
+    </section>
+
+    <section id="demo" class="section-shell demo-section">
+      <div class="section-heading demo-heading reveal">
+        <p class="eyebrow">03 / Before &amp; after</p>
+        <h2>Watch the harness<br><em>change the artifact.</em></h2>
+      </div>
+
+      <div class="demo-case demo-case-action">
+        <div class="demo-note reveal">
+          <p>Richer visual and action design.</p>
+        </div>
+        <div class="action-showcase">
+          <div class="action-pair">
+            <div class="action-pair-label reveal">Racing Trick Runner</div>
+            <p class="case-source reveal">Cases from GameCraft-Bench (<a href="https://github.com/FreedomIntelligence/gamecraft-bench" target="_blank" rel="noreferrer">project repository</a>).</p>
+            <div class="harness-comparison reveal">
+              <div class="harness-heading">
+                <span class="harness-kicker">Harness control flow</span>
+                <span class="harness-direction">baseline <span aria-hidden="true">&#8594;</span> evolved</span>
+              </div>
+              <div class="harness-grid">
+                <figure class="harness-card">
+                  <figcaption><span>Baseline control flow</span><small>single pass replay</small></figcaption>
+                  <div class="harness-frame harness-frame-wide">
+                    <img src="assets/snow-runner-harness-before.svg" alt="Baseline Racing Trick Runner harness control flow">
+                  </div>
+                </figure>
+                <figure class="harness-card harness-card-new">
+                  <figcaption><span>Evolved control flow</span><small>branched run validation</small></figcaption>
+                  <div class="harness-frame harness-frame-wide">
+                    <img src="assets/snow-runner-harness-after.svg" alt="Evolved Racing Trick Runner harness control flow">
+                  </div>
+                </figure>
+              </div>
+            </div>
+            <div class="demo-grid">
+              <figure class="demo-card reveal">
+                <div class="demo-frame"><img src="assets/baseline-snow-runner.gif" alt="Animated baseline Racing Trick Runner game demo"></div>
+                <figcaption><span>Baseline</span><small>Menu-heavy shallow run</small></figcaption>
+              </figure>
+              <figure class="demo-card demo-card-new reveal reveal-delay">
+                <div class="demo-frame"><img src="assets/evolved-snow-runner.gif" alt="Animated evolved Racing Trick Runner game demo"></div>
+                <figcaption><span>Evolved</span><small>Playable downhill state</small></figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="action-pair">
+            <div class="action-pair-label reveal">Space Shooter</div>
+            <p class="case-source reveal">Cases from V-GameGym (<a href="https://github.com/alibaba/SKYLENAGE-GameCodeGym/tree/main" target="_blank" rel="noreferrer">project repository</a>).</p>
+            <div class="harness-comparison reveal">
+              <div class="harness-heading">
+                <span class="harness-kicker">Harness control flow</span>
+                <span class="harness-direction">baseline <span aria-hidden="true">&#8594;</span> evolved</span>
+              </div>
+              <div class="harness-grid">
+                <figure class="harness-card">
+                  <figcaption><span>Baseline control flow</span><small>linear edit / run / evaluate</small></figcaption>
+                  <div class="harness-frame">
+                    <img src="assets/space-shooter-harness-before.svg" alt="Baseline Space Shooter harness control flow">
+                  </div>
+                </figure>
+                <figure class="harness-card harness-card-new">
+                  <figcaption><span>Evolved control flow</span><small>probe, repair, replay</small></figcaption>
+                  <div class="harness-frame">
+                    <img src="assets/space-shooter-harness-after.svg" alt="Evolved Space Shooter harness control flow">
+                  </div>
+                </figure>
+              </div>
+            </div>
+            <div class="demo-grid">
+              <figure class="demo-card reveal">
+                <div class="demo-frame"><img src="assets/baseline-space-shooter.gif" alt="Animated baseline Space Shooter game demo"></div>
+                <figcaption><span>Baseline</span><small>Simple visual language</small></figcaption>
+              </figure>
+              <figure class="demo-card demo-card-new reveal reveal-delay">
+                <div class="demo-frame"><img src="assets/evolved-space-shooter.gif" alt="Animated evolved Space Shooter game demo"></div>
+                <figcaption><span>Evolved</span><small>Richer enemies and action</small></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-case demo-case-engineering">
+        <div class="demo-note reveal">
+          <p>Better engineering development.</p>
+        </div>
+        <div class="engineering-pair">
+          <div class="action-pair-label reveal">Task 0015 / Fog and LUT grading</div>
+          <p class="case-source reveal">Cases from GameDevBench (<a href="https://github.com/waynchi/gamedevbench" target="_blank" rel="noreferrer">project repository</a>).</p>
+          <div class="harness-comparison reveal">
+            <div class="harness-heading">
+              <span class="harness-kicker">Harness control flow</span>
+              <span class="harness-direction">baseline <span aria-hidden="true">&#8594;</span> evolved</span>
+            </div>
+            <div class="harness-grid">
+              <figure class="harness-card">
+                <figcaption><span>Baseline control flow</span><small>single scene edit</small></figcaption>
+                <div class="harness-frame">
+                  <img src="assets/engineering-fog-lut-harness-before.svg" alt="Baseline fog and LUT grading harness control flow">
+                </div>
+              </figure>
+              <figure class="harness-card harness-card-new">
+                <figcaption><span>Evolved control flow</span><small>fog, volume, LUT validation</small></figcaption>
+                <div class="harness-frame">
+                  <img src="assets/engineering-fog-lut-harness-after.svg" alt="Evolved fog and LUT grading harness control flow">
+                </div>
+              </figure>
+            </div>
+          </div>
+          <div class="demo-grid">
+            <figure class="demo-card reveal">
+              <div class="demo-frame"><img src="assets/baseline-engineering-fog-lut.gif" alt="Animated baseline Godot fog and LUT grading task demo"></div>
+              <figcaption><span>Baseline</span><small>Settings barely visible</small></figcaption>
+            </figure>
+            <figure class="demo-card demo-card-new reveal reveal-delay">
+              <div class="demo-frame"><img src="assets/evolved-engineering-fog-lut.gif" alt="Animated evolved Godot fog and LUT grading task demo"></div>
+              <figcaption><span>Evolved</span><small>Scene setup becomes inspectable</small></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-case demo-case-narrative">
+        <div class="demo-note reveal">
+          <p>Richer narrative and character orchestration.</p>
+        </div>
+        <p class="case-source case-source-centered reveal">Case from <a href="https://github.com/fleetingheart/ksre" target="_blank" rel="noreferrer">Katawa Shoujo: Re-Engineered</a>.</p>
+        <div class="harness-comparison reveal">
+          <div class="harness-heading">
+            <span class="harness-kicker">Harness control flow</span>
+            <span class="harness-direction">baseline <span aria-hidden="true">&#8594;</span> evolved</span>
+          </div>
+          <div class="harness-grid">
+            <figure class="harness-card">
+              <figcaption><span>Baseline control flow</span><small>one candidate / one smoke route</small></figcaption>
+              <div class="harness-frame harness-frame-tall">
+                <img src="assets/ksre-harness-before.svg" alt="Old KSRE harness flowchart">
+              </div>
+            </figure>
+            <figure class="harness-card harness-card-new">
+              <figcaption><span>Evolved control flow</span><small>state, branches, route validation</small></figcaption>
+              <div class="harness-frame harness-frame-tall">
+                <img src="assets/ksre-harness-after.svg" alt="Evolved KSRE harness flowchart">
+              </div>
+            </figure>
+          </div>
+        </div>
+        <div class="demo-grid">
+          <figure class="demo-card reveal">
+            <div class="demo-frame"><img src="assets/baseline-visual-novel.gif" alt="Animated baseline visual novel game demo"></div>
+            <figcaption><span>Baseline</span><small>Minimal runtime path</small></figcaption>
+          </figure>
+          <figure class="demo-card demo-card-new reveal reveal-delay">
+            <div class="demo-frame"><img src="assets/evolved-visual-novel.gif" alt="Animated evolved visual novel game demo"></div>
+            <figcaption><span>Evolved</span><small>More complete playable flow</small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="section-shell quote-layout reveal">
+        <p class="quote-mark">“</p>
+        <blockquote>A game is not successful because its code compiles. It is successful when the intended experience survives contact with the runtime.</blockquote>
+        <p class="quote-attribution">— Game-Evolver, research premise</p>
+      </div>
+    </section>
+
+    <section id="paper" class="paper-section section-shell">
+      <div class="paper-copy reveal">
+        <p class="eyebrow">04 / Read the work</p>
+        <h2>From game generation<br>to <em>game improvement.</em></h2>
+        <p>Across four game benchmarks and six backbone models, Game-Evolver improves every baseline. The framework also transfers to Terminal-Bench and &#964;2-Bench, where execution feedback exposes the same gap between intention and outcome.</p>
+        <a class="button button-outline" href="assets/Game-Evolver-paper.pdf" target="_blank" rel="noreferrer">Open the full paper <span aria-hidden="true">&#8599;</span></a>
+      </div>
+      <div class="paper-index reveal reveal-delay" aria-label="Paper details">
+        <div><span>Benchmarks</span><strong>06</strong></div>
+        <div><span>Nested loops</span><strong>02</strong></div>
+        <div><span>Evaluation</span><strong>Runtime-first</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div><span class="wordmark-mark" aria-hidden="true">GE</span> Game-Evolver</div>
+    <p>Dual-loop evolution for end-to-end game orchestration.</p>
+    <a href="https://github.com/xuc865/Game-Evolver" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">&#8599;</span></a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

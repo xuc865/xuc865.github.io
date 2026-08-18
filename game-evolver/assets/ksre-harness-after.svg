@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="35 215 735 270" role="img" aria-label="KSRE evolved harness flowchart">
+  <rect width="800" height="600" fill="#f7f3ec"/>
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2a7f76"/></marker>
+    <marker id="fail-arrow" markerWidth="6" markerHeight="6" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#b66b58"/></marker>
+  </defs>
+  <path d="M142 270 L172 270" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M264 270 L294 270" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M386 270 L416 270" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M508 270 L538 270" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M630 270 L660 270" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M706 300 L706 340" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M706 400 L706 420" fill="none" stroke="#2a7f76" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M584 300 C584 378 340 414 340 300" fill="none" stroke="#b66b58" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#fail-arrow)"/>
+  <path d="M660 370 C600 370 555 332 508 292" fill="none" stroke="#b66b58" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#fail-arrow)"/>
+  <text x="390" y="386" text-anchor="middle" font-size="9.1" fill="#b66b58">consistency fail → revise scenes</text>
+  <text x="590" y="320" text-anchor="middle" font-size="9.1" fill="#b66b58">route fail → revise events</text>
+
+  <rect x="50" y="240" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="96" y="263" text-anchor="middle" font-size="10.1" fill="#2f3437">Episode goal</text>
+  <text x="96" y="280" text-anchor="middle" font-size="9.1" fill="#726b60">+ constraints</text>
+  <rect x="172" y="240" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="218" y="263" text-anchor="middle" font-size="10.1" fill="#2f3437">Global plan</text>
+  <text x="218" y="280" text-anchor="middle" font-size="9.1" fill="#726b60">setup → payoff</text>
+  <rect x="294" y="240" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="340" y="263" text-anchor="middle" font-size="10.1" fill="#2f3437">Scenes</text>
+  <text x="340" y="280" text-anchor="middle" font-size="9.1" fill="#726b60">+ dialogue</text>
+  <rect x="416" y="240" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="462" y="263" text-anchor="middle" font-size="10.1" fill="#2f3437">Events</text>
+  <text x="462" y="280" text-anchor="middle" font-size="9.1" fill="#726b60">+ state</text>
+  <rect x="538" y="240" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="584" y="263" text-anchor="middle" font-size="10.1" fill="#2f3437">Write back</text>
+  <text x="584" y="280" text-anchor="middle" font-size="9.1" fill="#726b60">+ lint</text>
+  <rect x="660" y="240" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="706" y="263" text-anchor="middle" font-size="10.1" fill="#2f3437">Consistency</text>
+  <text x="706" y="280" text-anchor="middle" font-size="9.1" fill="#726b60">state + branches</text>
+  <rect x="660" y="340" width="92" height="60" rx="9" fill="#fffdf8" stroke="#2f3437" stroke-width="1.4"/>
+  <text x="706" y="363" text-anchor="middle" font-size="10.1" fill="#2f3437">Route smoke</text>
+  <text x="706" y="380" text-anchor="middle" font-size="9.1" fill="#726b60">compile + play</text>
+  <rect x="660" y="420" width="92" height="38" rx="9" fill="#e1eee9" stroke="#2a7f76" stroke-width="1.6"/>
+  <text x="706" y="444" text-anchor="middle" font-size="10.2" font-weight="700" fill="#2f3437">ACCEPT</text>
+
+</svg>

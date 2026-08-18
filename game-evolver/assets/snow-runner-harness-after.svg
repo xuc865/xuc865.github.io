@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300" role="img" aria-label="Snow runner evolved harness control flow">
+  <rect width="800" height="300" fill="#f7f3ec"/>
+  <defs>
+    <marker id="arrow-new" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1f7a6e"/>
+    </marker>
+    <marker id="arrow-branch" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#4b8bda"/>
+    </marker>
+  </defs>
+  <path d="M140 71 L184 71" fill="none" stroke="#1f7a6e" stroke-width="2.6" marker-end="url(#arrow-new)"/>
+  <path d="M328 71 L372 71" fill="none" stroke="#1f7a6e" stroke-width="2.6" marker-end="url(#arrow-new)"/>
+  <path d="M548 71 L592 71" fill="none" stroke="#1f7a6e" stroke-width="2.6" marker-end="url(#arrow-new)"/>
+  <path d="M674 116 L674 154" fill="none" stroke="#1f7a6e" stroke-width="2.6" marker-end="url(#arrow-new)"/>
+
+  <path d="M220 154 L220 128" fill="none" stroke="#4b8bda" stroke-width="2.3" marker-end="url(#arrow-branch)"/>
+  <path d="M400 154 L400 128" fill="none" stroke="#4b8bda" stroke-width="2.3" marker-end="url(#arrow-branch)"/>
+  <path d="M578 154 L600 121" fill="none" stroke="#4b8bda" stroke-width="2.3" marker-end="url(#arrow-branch)"/>
+  <path d="M400 236 L400 264 L674 264 L674 236" fill="none" stroke="#1f7a6e" stroke-width="2.3" marker-end="url(#arrow-new)"/>
+
+  <rect x="32" y="34" width="108" height="74" rx="10" fill="#eef7f5" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="86" y="64" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Task spec</text>
+  <text x="86" y="86" text-anchor="middle" font-size="12" fill="#726b60">runner goal</text>
+
+  <rect x="184" y="34" width="144" height="74" rx="10" fill="#fffdf8" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="256" y="64" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Expanded</text>
+  <text x="256" y="86" text-anchor="middle" font-size="12" fill="#726b60">project state</text>
+
+  <rect x="372" y="24" width="176" height="94" rx="10" fill="#eef7f5" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="460" y="54" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Replay traces</text>
+  <text x="460" y="78" text-anchor="middle" font-size="12" fill="#726b60">title / run / weather</text>
+  <text x="460" y="98" text-anchor="middle" font-size="12" fill="#726b60">unlock / retry</text>
+
+  <rect x="592" y="24" width="164" height="94" rx="10" fill="#fffdf8" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="674" y="54" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Verifier</text>
+  <text x="674" y="78" text-anchor="middle" font-size="12" fill="#726b60">build + replay</text>
+  <text x="674" y="98" text-anchor="middle" font-size="12" fill="#726b60">complete</text>
+
+  <rect x="78" y="154" width="184" height="82" rx="10" fill="#f5fbff" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="170" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Run layer</text>
+  <text x="170" y="209" text-anchor="middle" font-size="12" fill="#726b60">jump / flip / spin</text>
+
+  <rect x="306" y="154" width="188" height="82" rx="10" fill="#fffdf8" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="400" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Collection</text>
+  <text x="400" y="209" text-anchor="middle" font-size="12" fill="#726b60">unlock riders</text>
+
+  <rect x="536" y="154" width="188" height="82" rx="10" fill="#f5fbff" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="630" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Weather</text>
+  <text x="630" y="209" text-anchor="middle" font-size="12" fill="#726b60">fog / snow / blizzard</text>
+</svg>

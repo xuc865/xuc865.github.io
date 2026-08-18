@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300" role="img" aria-label="Snow runner baseline harness control flow">
+  <rect width="800" height="300" fill="#f7f3ec"/>
+  <defs>
+    <marker id="arrow-old" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#b45309"/>
+    </marker>
+  </defs>
+  <path d="M164 91 L208 91" fill="none" stroke="#b45309" stroke-width="2.6" marker-end="url(#arrow-old)"/>
+  <path d="M332 91 L376 91" fill="none" stroke="#b45309" stroke-width="2.6" marker-end="url(#arrow-old)"/>
+  <path d="M544 91 L588 91" fill="none" stroke="#b45309" stroke-width="2.6" marker-end="url(#arrow-old)"/>
+  <path d="M670 128 L670 172" fill="none" stroke="#b45309" stroke-width="2.6" marker-end="url(#arrow-old)"/>
+
+  <rect x="44" y="54" width="120" height="74" rx="10" fill="#fffaf0" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="104" y="84" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Task spec</text>
+  <text x="104" y="106" text-anchor="middle" font-size="12" fill="#726b60">racing runner</text>
+
+  <rect x="208" y="54" width="124" height="74" rx="10" fill="#fffdf8" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="270" y="84" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Candidate</text>
+  <text x="270" y="106" text-anchor="middle" font-size="12" fill="#726b60">Main.gd + scene</text>
+
+  <rect x="376" y="42" width="168" height="98" rx="10" fill="#fffaf0" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="460" y="72" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Replay traces</text>
+  <text x="460" y="96" text-anchor="middle" font-size="12" fill="#726b60">title / boost</text>
+  <text x="460" y="116" text-anchor="middle" font-size="12" fill="#726b60">weather / collection</text>
+
+  <rect x="588" y="42" width="164" height="98" rx="10" fill="#fffdf8" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="670" y="72" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Verifier</text>
+  <text x="670" y="96" text-anchor="middle" font-size="12" fill="#726b60">build + judge</text>
+  <text x="670" y="116" text-anchor="middle" font-size="12" fill="#726b60">single replay pass</text>
+
+  <rect x="504" y="172" width="248" height="82" rx="10" fill="#fffaf0" stroke="#2f3437" stroke-width="1.8"/>
+  <text x="628" y="205" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Result</text>
+  <text x="628" y="228" text-anchor="middle" font-size="12" fill="#726b60">works, but run stays shallow</text>
+</svg>
