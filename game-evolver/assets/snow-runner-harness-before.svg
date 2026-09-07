@@ -8,7 +8,7 @@
   <path d="M164 91 L208 91" fill="none" stroke="#b45309" stroke-width="2.6" marker-end="url(#arrow-old)"/>
   <path d="M332 91 L376 91" fill="none" stroke="#b45309" stroke-width="2.6" marker-end="url(#arrow-old)"/>
   <path d="M544 91 L588 91" fill="none" stroke="#b45309" stroke-width="2.6" marker-end="url(#arrow-old)"/>
-  <path d="M670 128 L670 172" fill="none" stroke="#b45309" stroke-width="2.6" marker-end="url(#arrow-old)"/>
+  <path d="M670 140 L670 172" fill="none" stroke="#b45309" stroke-width="2.6" marker-end="url(#arrow-old)"/>
 
   <rect x="44" y="54" width="120" height="74" rx="10" fill="#fffaf0" stroke="#2f3437" stroke-width="1.8"/>
   <text x="104" y="84" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3437">Task spec</text>
