@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360">
+  <rect width="760" height="360" fill="#f7f3ec"/>
+  <text x="24" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#24313a">PolyBranch Remediated</text>
+  <text x="24" y="51" font-family="Arial, sans-serif" font-size="12" fill="#65757d">Epoch 50 · ACCEPT · Codex game-evolver workflow</text>
+  <defs>
+    <marker id="arrow-main" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2b8c8c"/></marker>
+    <marker id="arrow-merge" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c85f3f"/></marker>
+  </defs>
+  <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-main)"><path d="M164 108 C206 108 176 108 218 108" stroke="#2b8c8c"/><path d="M348 108 C390 108 360 108 402 108" stroke="#2b8c8c"/><path d="M532 108 C574 108 544 108 586 108" stroke="#2b8c8c"/><path d="M651 134 L651 172 L595 172 L595 210" stroke="#2b8c8c" stroke-dasharray="5 5"/><path d="M660 236 L490 236 L490 236 L320 236" stroke="#c85f3f" marker-end="url(#arrow-merge)"/><path d="M450 236 L280 236 L280 236 L110 236" stroke="#c85f3f" marker-end="url(#arrow-merge)"/></g>
+  <g stroke="#24313a" stroke-width="1.2"><rect x="34" y="82" width="130" height="52" rx="8" fill="#f8e8c7"/><rect x="218" y="82" width="130" height="52" rx="8" fill="#d8eeee"/><rect x="402" y="82" width="130" height="52" rx="8" fill="#e5edd9"/><rect x="586" y="82" width="130" height="52" rx="8" fill="#ede0f4"/><rect x="530" y="210" width="130" height="52" rx="8" fill="#f6d8d3"/><rect x="320" y="210" width="130" height="52" rx="8" fill="#f8e8c7"/><rect x="110" y="210" width="130" height="52" rx="8" fill="#d8eeee"/></g>
+  <g font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#24313a"><text x="99" y="104">Parent probe</text><text x="99" y="120">known failure</text><text x="283" y="104">Score hook</text><text x="283" y="120">deterministic</text><text x="467" y="104">Popup hook</text><text x="467" y="120">deterministic</text><text x="651" y="104">180s browser run</text><text x="651" y="120">bounded</text><text x="595" y="232">Evidence check</text><text x="595" y="248">score + popup</text><text x="385" y="232">Paired gate</text><text x="385" y="248">quality &gt;= parent</text><text x="175" y="232">Continue</text><text x="175" y="248">next epoch</text></g>
+  <text x="24" y="344" font-family="Arial, sans-serif" font-size="11" fill="#65757d">After the probe remediation, the workflow produces a stable continuation chain and progressively richer tunnel, HUD, and feedback presentation.</text>
+</svg>

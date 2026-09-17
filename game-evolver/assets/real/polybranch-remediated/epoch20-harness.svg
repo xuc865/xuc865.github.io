@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360">
+  <rect width="760" height="360" fill="#f7f3ec"/>
+  <text x="24" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#24313a">PolyBranch Remediated</text>
+  <text x="24" y="51" font-family="Arial, sans-serif" font-size="12" fill="#65757d">Epoch 20 · ACCEPT · Codex game-evolver workflow</text>
+  <defs>
+    <marker id="arrow-main" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2b8c8c"/></marker>
+    <marker id="arrow-merge" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c85f3f"/></marker>
+  </defs>
+  <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-main)"><path d="M168 114 C210 114 190 114 232 114" stroke="#2b8c8c"/><path d="M362 114 C404 114 384 114 426 114" stroke="#2b8c8c"/><path d="M491 140 L491 173 L491 173 L491 206" stroke="#2b8c8c" stroke-dasharray="5 5"/><path d="M556 232 C598 232 548 232 590 232" stroke="#2b8c8c"/></g>
+  <g stroke="#24313a" stroke-width="1.2"><rect x="38" y="88" width="130" height="52" rx="8" fill="#f8e8c7"/><rect x="232" y="88" width="130" height="52" rx="8" fill="#d8eeee"/><rect x="426" y="88" width="130" height="52" rx="8" fill="#e5edd9"/><rect x="426" y="206" width="130" height="52" rx="8" fill="#ede0f4"/><rect x="590" y="206" width="130" height="52" rx="8" fill="#f6d8d3"/></g>
+  <g font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#24313a"><text x="103" y="110">Probe failure</text><text x="103" y="126">score / popup</text><text x="297" y="110">Find hook</text><text x="297" y="126">page context</text><text x="491" y="110">Patch hook</text><text x="491" y="126">deterministic</text><text x="491" y="228">Bounded run</text><text x="491" y="244">34 checks</text><text x="655" y="228">Paired gate</text><text x="655" y="244">continue if &gt;=</text></g>
+  <text x="24" y="344" font-family="Arial, sans-serif" font-size="11" fill="#65757d">After the probe remediation, the workflow produces a stable continuation chain and progressively richer tunnel, HUD, and feedback presentation.</text>
+</svg>

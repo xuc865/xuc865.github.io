@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360">
+  <rect width="760" height="360" fill="#f7f3ec"/>
+  <text x="24" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#24313a">Iron Breakout FPS</text>
+  <text x="24" y="51" font-family="Arial, sans-serif" font-size="12" fill="#65757d">Epoch 20 · ACCEPT · Codex game-evolver workflow</text>
+  <defs>
+    <marker id="arrow-main" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2b8c8c"/></marker>
+    <marker id="arrow-merge" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c85f3f"/></marker>
+  </defs>
+  <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-main)"><path d="M164 174 C184 174 184 72 184 72 L285 72 L285 82" stroke="#2b8c8c"/><path d="M164 174 C206 174 178 240 220 240" stroke="#2b8c8c"/><path d="M350 108 C392 108 402 174 444 174" stroke="#2b8c8c"/><path d="M350 240 C392 240 402 174 444 174" stroke="#2b8c8c"/><path d="M574 174 C616 174 548 174 590 174" stroke="#2b8c8c"/></g>
+  <g stroke="#24313a" stroke-width="1.2"><rect x="34" y="148" width="130" height="52" rx="8" fill="#f8e8c7"/><rect x="220" y="82" width="130" height="52" rx="8" fill="#d8eeee"/><rect x="220" y="214" width="130" height="52" rx="8" fill="#e5edd9"/><rect x="444" y="148" width="130" height="52" rx="8" fill="#ede0f4"/><rect x="590" y="148" width="130" height="52" rx="8" fill="#f6d8d3"/></g>
+  <g font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#24313a"><text x="99" y="170">FPS task</text><text x="99" y="186">aim + fire</text><text x="285" y="104">Weapon slice</text><text x="285" y="120">projectile</text><text x="285" y="236">Arena slice</text><text x="285" y="252">cover</text><text x="509" y="170">Hit probe</text><text x="509" y="186">collision</text><text x="655" y="170">Gate</text><text x="655" y="186">playable</text></g>
+  <text x="24" y="344" font-family="Arial, sans-serif" font-size="11" fill="#65757d">The FPS moves from a minimal playable shell toward clearer combat readability, stronger scene dressing, and richer feedback.</text>
+</svg>
